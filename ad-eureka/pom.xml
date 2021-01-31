@@ -18,8 +18,8 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        <!-- 服务网关 -->
-        <!--<dependency>
+     <!--   &lt;!&ndash; 服务网关 &ndash;&gt;
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>-->
