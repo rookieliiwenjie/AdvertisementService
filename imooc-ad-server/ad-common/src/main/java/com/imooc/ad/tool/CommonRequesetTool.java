@@ -2,7 +2,7 @@ package com.imooc.ad.tool;
 
 import com.imooc.ad.enumContent.ErrorEnum;
 import com.imooc.ad.vo.CommonResponse;
-
+import com.imooc.ad.constant.ConstantsCode;
 /**
  * Created by lwj32 on 2021/1/31.
  */
@@ -63,6 +63,7 @@ public class CommonRequesetTool {
         return commonResponse;
 
     }
+
 
 
 }

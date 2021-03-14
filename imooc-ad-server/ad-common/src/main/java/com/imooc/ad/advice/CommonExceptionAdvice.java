@@ -1,5 +1,6 @@
 package com.imooc.ad.advice;
 
+import com.imooc.ad.constant.ConstantsCode;
 import com.imooc.ad.enumContent.ErrorEnum;
 import com.imooc.ad.exception.AdException;
 import com.imooc.ad.tool.CommonRequesetTool;
@@ -18,14 +19,14 @@ import javax.servlet.http.HttpServletRequest;
 public class CommonExceptionAdvice {
     @ExceptionHandler({AdException.class})
     public CommonResponse exceptionHandler(HttpServletRequest httpServletRequest, AdException e) {
-
-        CommonResponse commonResponse = CommonRequesetTool.setError(new CommonResponse(), ErrorEnum.FAIL.getCode(), e.getMessage());
+        ConstantsCode constantsCode = ConstantsCode.getByCode(e.getMessage());
+        CommonResponse commonResponse = CommonRequesetTool.setError(new CommonResponse(), constantsCode.getCode(), constantsCode.getDesc());
         log.error("请求失败", httpServletRequest.getRequestURI() + "发生异常" + e.getMessage());
         return commonResponse;
     }
 
-    @ExceptionHandler({RuntimeException.class})
-    public CommonResponse exceptionHandlerE(HttpServletRequest httpServletRequest, AdException e) {
+    @ExceptionHandler({Exception.class})
+    public CommonResponse exceptionHandlerE(HttpServletRequest httpServletRequest, Exception e) {
 
         CommonResponse commonResponse = CommonRequesetTool.setError(new CommonResponse(), ErrorEnum.FAIL.getCode(), e.getMessage());
         log.error("请求失败", httpServletRequest.getRequestURI() + "发生异常" + e.getMessage());

@@ -6,5 +6,13 @@ spring:
 
 eureka:
   client:
-    service-url:
-      defaultZone: http://server1:8000/eureka/
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka/
+zuul:
+  prefix: /imooc
+  routes:
+    spansor:
+      path: /ad-sponsor/**
+      serviceId: euraka-client-ad-spanor
+      #是否加前缀
+      strip-prefix: false

@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class SucheduDemo {
     //fixedDelay上一次执行完再执行
-    @Scheduled(fixedDelay = 2000)
+   /// @Scheduled(fixedDelay = 2000)
     public int demo() throws InterruptedException {
         TimeUnit.SECONDS.sleep(10);
         log.info("11111");

@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>ad-common</module>
+        <module>ad-spanor</module>
+        <module>ad-search</module>
     </modules>
 
 

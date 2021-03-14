@@ -1,0 +1,9 @@
+com\immooc\ag\ZuulGatWayApplication.class
+com\immooc\ag\filter\model\RequestDTO.class
+com\immooc\ag\DemoService\Runnner01.class
+com\immooc\ag\interceptor\LogAspect.class
+com\immooc\ag\interceptor\LogInterface.class
+com\immooc\ag\DemoService\Runnner02.class
+com\immooc\ag\filter\PreFilter.class
+com\immooc\ag\DemoService\SucheduDemo.class
+com\immooc\ag\filter\AccessLogFilter.class

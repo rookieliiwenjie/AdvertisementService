@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
  * Created by lwj32 on 2021/1/31.
+ * 拦截所有json
  */
 @RestControllerAdvice
 public class CommonResonseDataAdvice implements ResponseBodyAdvice {
@@ -23,7 +24,7 @@ public class CommonResonseDataAdvice implements ResponseBodyAdvice {
             return false;
         }
         if (methodParameter.getMethod().isAnnotationPresent(IgnoreResponseAdvice.class)) {
-
+            return false;
         }
         return true;
     }
